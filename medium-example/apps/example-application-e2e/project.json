@@ -5,16 +5,10 @@
   "projectType": "application",
   "targets": {
     "e2e": {
-      "executor": "@nx/cypress:cypress",
+      "executor": "nx:run-commands",
       "options": {
-        "cypressConfig": "apps/example-application-e2e/cypress.config.ts",
-        "devServerTarget": "example-application:serve:development",
-        "testingType": "e2e"
-      },
-      "configurations": {
-        "production": {
-          "devServerTarget": "example-application:serve:production"
-        }
+        "commands": ["playwright test"],
+        "cwd": "apps/example-application-e2e"
       }
     },
     "lint": {
