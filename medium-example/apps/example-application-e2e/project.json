@@ -6,16 +6,7 @@
   "targets": {
     "e2e": {
       "executor": "@nx/cypress:cypress",
-      "options": {
-        "cypressConfig": "apps/example-application-e2e/cypress.config.ts",
-        "devServerTarget": "example-application:serve:development",
-        "testingType": "e2e"
-      },
-      "configurations": {
-        "production": {
-          "devServerTarget": "example-application:serve:production"
-        }
-      }
+      "options": {}
     },
     "lint": {
       "executor": "@nx/linter:eslint",
