@@ -5,8 +5,11 @@
   "projectType": "application",
   "targets": {
     "e2e": {
-      "executor": "@nx/cypress:cypress",
-      "options": {}
+      "executor": "nx:run-commands",
+      "options": {
+        "commands": ["playwright test"],
+        "cwd": "apps/example-application-e2e"
+      }
     },
     "lint": {
       "executor": "@nx/linter:eslint",
